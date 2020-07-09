@@ -25,12 +25,12 @@ def home():
     dict = { 'amt':15}
     return render_template('homepage.html')
 
-@app.route('/paymentrecieved',methods = ['GET'])
+@app.route('/paymentrecieved',methods = ['GET','POST'])
 def accept_payment():
-    id  = request.args.get('payment_id')
+    idm  = request.args.get('payment_id')
     stat = request.args.get('payment_status')
     req = request.args.get('payment_request_id')
-    dct = {'id':id,'stat':stat,'req':req}
+    dct = {'id':idm,'stat':stat,'req':req}
     return render_template('index.html')
 
 if __name__ == "__main__" :
