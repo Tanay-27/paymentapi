@@ -25,7 +25,7 @@ def home():
     dict = { 'amt':15}
     return render_template('homepage.html')
 
-@app.route('/paymentrecieved',methods = 'GET')
+@app.route('/paymentrecieved',methods = ['GET'])
 def accept_payment():
     idm  = request.args.get('payment_id')
     stat = request.args.get('payment_status')
