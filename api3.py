@@ -22,7 +22,7 @@ response = api.payment_request_create(
 
 @app.route('/')
 def home():
-    dict = { 'amt':15,'url':url}
+    dict = { 'amt':15}
     return render_template('homepage.html')
 
 @app.route('/paymentrecieved',methods = ['GET'])
