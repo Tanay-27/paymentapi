@@ -1,0 +1,9 @@
+flask
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+instamojo_wrapper
+qrcode
+
