@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, url_for
-from final_year.instamojoapi import api1
+import api1
 app = Flask(__name__)
 
 @app.route('/')
