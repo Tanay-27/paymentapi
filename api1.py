@@ -1,5 +1,4 @@
 from instamojo_wrapper import Instamojo
-from PIL import Image
 API_KEY = 'test_a7fe6937b28c505f371ce8ca286'
 AUTH_TOKEN = 'test_a68ddfad2ea46762db39aadd1e3'
 api = Instamojo(api_key=API_KEY,
