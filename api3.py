@@ -2,9 +2,9 @@ from flask import Flask, request, render_template, url_for
 import api1
 app = Flask(__name__)
 
+url = api1.createPayment("getfrompc",30)
 @app.route('/')
 def home():
-    url = api1.createPayment("getfrompc",30)
     dict = { 'amt':15,'url':url}
     return render_template('homepage.html')
 
