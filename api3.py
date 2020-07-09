@@ -17,7 +17,7 @@ response = api.payment_request_create(
     purpose="app test",
     send_email=True,
     email="tanayshah027@gmail.com",
-    redirect_url="https://amvmpayments-api.herokuapp.com/paymentrecieved?",
+    redirect_url="https://amvmpayments-api.herokuapp.com/paymentrecieved",
     )
 
 @app.route('/')
@@ -25,13 +25,13 @@ def home():
     dict = { 'amt':15}
     return render_template('homepage.html')
 
-@app.route('/paymentrecieved?<data>',methods = ['GET'])
-def accept_payment(data):
+@app.route('/paymentrecieved',methods = 'GET')
+def accept_payment():
     idm  = request.args.get('payment_id')
     stat = request.args.get('payment_status')
     req = request.args.get('payment_request_id')
     dct = {'id':idm,'stat':stat,'req':req}
-    return render_template('index.html')
+    return f"<h1>{stat}</h1>"
 
 if __name__ == "__main__" :
     app.run(debug=True)
