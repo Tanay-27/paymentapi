@@ -31,7 +31,7 @@ def accept_payment():
     stat = request.args.get('payment_status')
     req = request.args.get('payment_request_id')
     dct = {'id':idm,'stat':stat,'req':req}
-    return f"<h1>{stat}</h1>"
+    return render_template('index.html')
 
 if __name__ == "__main__" :
     app.run(debug=True)
