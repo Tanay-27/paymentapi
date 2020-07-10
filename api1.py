@@ -14,8 +14,12 @@ def createPayment(pur,amt):
         email="tanayshah027@gmail.com",
         redirect_url="https://amvmpayment-api.heroku.com/paymentrecieved/"
         )
-# print the long URL of the payment request.
-#print(response['payment_request']['longurl'])
-# print the unique ID(or payment request ID)
-#print(response['payment_request']['id'])
+
+    #print the long URL of the payment request.
+    print(response['payment_request']['longurl'])
+    #print the unique ID(or payment request ID)
+    print(response['payment_request']['id'])
     return response['payment_request']['longurl']
+
+ret = createPayment("v",25)
+print(ret)

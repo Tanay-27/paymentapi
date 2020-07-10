@@ -13,10 +13,10 @@ api = Instamojo(api_key=API_KEY,
                 endpoint='https://test.instamojo.com/api/1.1/')
 
 response = api.payment_request_create(
-    amount=25,
+    amount=60,
     purpose="app test",
     send_email=True,
-    email="tanayshah027@gmail.com",
+    email="tanayshah@live.com",
     redirect_url="https://amvmpayments-api.herokuapp.com/paymentrecieved",
     )
 
